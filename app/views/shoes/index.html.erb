@@ -1,0 +1,35 @@
+<h1>Listing shoes</h1>
+
+<table>
+  <tr>
+    <th>Product Code</th>
+    <th>Size</th>
+    <th>Manufacturer</th>
+    <th>Quantity</th>
+    <th>Color</th>
+    <th>Style</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @shoes.each do |shoe| %>
+  <tr>
+    <td><%= shoe.productCode %></td>
+    <td><%= shoe.style %></td>
+    <td><%= shoe.manufacturer %></td>
+    <td><%= shoe.quantity %></td>
+    <td><%= shoe.color %></td>
+    <td><%= shoe.style %></td>
+    <td><%= shoe.price %></td>
+    <td><%= link_to 'Show', shoe %></td>
+    <td><%= link_to 'Edit', edit_shoe_path(shoe) %></td>
+    <td><%= link_to 'Buy', buy_path %></td> <!--buy_shoe_path(shoe) %></td>     <!--method: :delete -->
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Shoe', new_shoe_path %>

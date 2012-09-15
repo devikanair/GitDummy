@@ -1,0 +1,45 @@
+<%= form_for(@shoe) do |f| %>
+  <% if @shoe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@shoe.errors.count, "error") %> prohibited this shoe from being saved:</h2>
+
+      <ul>
+      <% @shoe.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :productCode %><br />
+    <%= f.text_field :productCode %>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br />
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :manufacturer %><br />
+    <%= f.text_field :manufacturer %>
+  </div>
+  <div class="field">
+    <%=  f.label :quantity %><br/>
+    <%=  f.text_field :quantity %>
+  </div>
+    <div class="field">
+      <%=  f.label :color %><br/>
+      <%=  f.text_field :color %>
+    </div>
+    <div class="field">
+      <%=  f.label :style %><br/>
+      <%=  f.text_field :style %>
+    </div>
+    <div class="field">
+      <%=  f.label :price %><br/>
+      <%=  f.text_field :price %>
+    </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
