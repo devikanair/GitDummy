@@ -3,7 +3,7 @@ RubyRailsTrial::Application.routes.draw do
 
   resources :shoes
 
-  match 'buy_shoe' => 'shoes#buy'
+  match 'buy' => 'shoes#buy'
   #match 'shoes/:id/buy' => 'shoes#buy', :as => :buy
 
   # The priority is based upon order of creation:
